@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/*=========== TABLE OF CONTENTS ===========
+1.  General css
+2.  Header // Nav // Social-links
+3.  Body / Main
+4.  Grid Layout
+5.  Top Section
+6.  Low Section / Cards
+7.  Footer
+8. Media Queries
+=========================================*/
+
+/*-------------------------------------
+  1. General css 
+--------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*-------------------------------------
+  2. Header // Nav // Social-links
+--------------------------------------*/
+
+header {
+  border-radius: 0 0 85% 85% / 30%;
+  display: inline-grid;
+  align-items: center;
+}
+
+nav {
+  position: relative;
+  grid-area: 1 / 1 / 4 / 4;
+  mask-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 25%,
+    #ffffff 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+nav ul {
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 25%,
+    rgba(255, 255, 255, 0.2) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+    inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 18px;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+.card-links a:hover,
+.social-links a:hover,
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1),
+    inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.title {
+  grid-area: 1 / 1;
+  font-size: 1.5rem;
+  font-family: "Bree Serif", serif;
+  text-transform: uppercase;
+  margin-left: 1rem;
+}
+
+.navbar .button {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+}
+
+.menu-toggle-btn {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.social-links {
+  grid-area: 1 / 3;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  padding: 10px;
+  color: #000;
+  font-size: 27px;
+  text-decoration: none;
+}
+
+/*-------------------------------------
+  3.Body / Main
+--------------------------------------*/
+
+body {
+  background-image: linear-gradient(to right, #b6fbff8e, #83a3d48d);
+  backdrop-filter: blur(10px);
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/*-------------------------------------
+  4.Grid Layout
+--------------------------------------*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    " header "
+    " main "
+    " footer ";
+  min-height: 100vh;
+}
+
+/*-------------------------------------
+  5.Top Section
+--------------------------------------*/
+
+.top-section {
+  display: flex;
+  align-items: center;
+}
+
+.right-box h2 {
+  margin-bottom: 1rem;
+}
+
+.about-me {
+  max-width: 407px;
+  font-size: 16px;
+}
+
+.right-box {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.8rem;
+}
+
+.left-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.img-frame {
+  background-image: url("/img/tom.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.308);
+}
+
+/*-------------------------------------
+  6.Low Section / Cards
+--------------------------------------*/
+
+.low-section {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.wrapper {
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 0 0;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  width: 80vw;
+  max-width: 1200px;
+  justify-content: center;
+  padding: 15px;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+  border: 5px solid #fff;
+  min-width: 30%;
+  height: 500px;
+  flex: 0 0 30%;
+  min-width: 300px;
+  max-width: 400px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: flex-start; /* Ensure cards are aligned to the start */
+  padding: 15px;
+  scroll-snap-type: x mandatory; /* Helps with snapping to the first card */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card1 {
+  background: linear-gradient(to bottom left, #3700ff77, #9206f6);
+}
+.card2 {
+  background: linear-gradient(to bottom left, #a3ee84, #037221);
+}
+.card3 {
+  background: linear-gradient(to bottom left, #ff000057, #eb1919);
+}
+.card4 {
+  background: linear-gradient(to bottom left, #003cff95, #00aeff);
+}
+
+.card-top {
+  border-radius: 100% 0% 100% 0% / 0% 50% 50% 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-top .fa-brands {
+  font-size: 80px;
+  color: #fff;
+  margin: 3px;
+}
+.card-low {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-headline {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.card-title {
+  font-family: "open sans";
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.card-text {
+  padding: 10px;
+  font-size: 18px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.card-links .fa {
+  padding-left: 5px;
+}
+
+.card-links a {
+  color: #000;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.card-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+#prev,
+#next {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+#prev {
+  left: 10px;
+}
+#next {
+  right: 10px;
+}
+
+#prev:hover,
+#next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*-------------------------------------
+	7.Footer 
+--------------------------------------*/
+
+footer {
+  grid-area: footer;
+  text-align: center;
+}
+
+/*-------------------------------------
+	8.Media Queries
+--------------------------------------*/
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.8rem;
+  }
+  main {
+    padding: 0 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .carousel {
+    height: 100%;
+  }
+
+  .top-section {
+    flex-direction: column;
+    height: auto;
+    width: auto;
+  }
+
+  .left-box {
+    justify-content: center;
+  }
+
+  .right-box {
+    justify-content: center;
+    padding: 0.2rem;
+    text-align: center;
+    display: flex;
+    line-height: normal;
+  }
+
+  .about-me {
+    text-align: left;
+    max-width: 264px;
+  }
+
+  .img-frame {
+    max-width: 100px;
+    max-height: 100px;
+  }
+
+  .navbar.visible {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .navbar.visible ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #b6fbff, #83a4d4);
+  }
+
+  .menu-toggle-btn {
+    display: block;
+  }
+
+  .social-links {
+    display: none;
+  }
+
+  nav {
+    mask-image: none;
+    display: none;
+  }
+  #next,
+  #prev {
+    display: none;
+  }
+
+  .card {
+    min-width: 80%;
+    max-height: max-content;
+    transform: scale(0.9);
+  }
+  .card-text {
+    font-size: 10px;
+    padding: 5px;
+  }
+  .card-links a {
+    font-size: 15px;
+  }
+  .card-top {
+    height: 40%;
+  }
+
+  .low-section {
+    width: 80%;
+  }
+
+  .card-top .fa-brands {
+    font-size: 40px;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 968px) {
+  .img-frame {
+    height: 100px;
+    width: 100px;
+  }
+
+  .left-box {
+    justify-content: center;
+  }
+  .top-section {
+    flex-direction: column;
+    gap: 10%;
+    width: 100%;
+  }
+
+  .right-box {
+    align-items: center;
+    padding: 0;
+    line-height: normal;
+  }
+  .right-box p {
+    padding: 4px;
+    font-size: 12px;
+  }
+
+  nav ul li a {
+    padding: 2px;
+  }
+  .card {
+    height: 300px;
+    transform: none;
+  }
+
+  .wrapper {
+    padding: 0;
+    position: static;
+  }
+  .low-section {
+    height: 100%;
+  }
+
+  #next,
+  #prev {
+    display: none;
+  }
+
+  main {
+    flex-direction: row-reverse;
+  }
+  .navbar.visible {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .navbar.visible ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #b6fbff, #83a4d4);
+  }
+
+  .menu-toggle-btn {
+    display: block;
+  }
+
+  .social-links {
+    display: none;
+  }
+
+  .card-headline {
+    font-size: 18px;
+  }
+  .card-title {
+    font-size: 14px;
+  }
+  .card-text {
+    font-size: 12px;
+  }
+}

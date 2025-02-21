@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>| About |</title>
+    <link rel="stylesheet" href="css/pdfModal.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/70f7a209bd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/pdfModal.js" defer></script>
+    <script src="js/nav-bar.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="title-holder">
+        <a href="index.html" class="page-title">Toms Cv</a>
+        <a href="index.html" class="page-title-2">& Projects</a>
+      </div>
+
+      <!-- Nav -->
+      <nav class="navbar">
+        <a href="index.html">Home<i class="fa-solid fa-house"></i></a>
+        <a href="about.html"
+          >About<i class="fa-solid fa-address-card" style="color: #fff200"></i
+        ></a>
+        <a href="contact.html"
+          >Contact<i class="fa-solid fa-address-book"></i
+        ></a>
+      </nav>
+      <button class="menu-toggle-btn">
+        <i class="nav-toggle fa-solid fa-bars xl"></i>
+      </button>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section class="container">
+        <article class="about-card">
+          <img class="round" src="img/tom.png" alt="Tom Larsson" />
+          <h2>Tom Larsson</h2>
+          <p class="text">
+            Hello! My name is Tom Larsson and I'm a student at Yrkeshögskolan in
+            Borås, Sweden. I want to become a front end developer. This page is
+            a part of my education where my task is to create a CV-site. I hope
+            you enjoy my work!
+          </p>
+          <div class="img-container">
+            <img class="sign" src="img/sign.png" alt="autograph" />
+          </div>
+        </article>
+        <article class="github-card">
+          <h2>My</h2>
+          <img
+            class="github-logo"
+            src="https://pngimg.com/uploads/github/github_PNG25.png"
+            alt="GitHub Logo"
+          />
+          <p>
+            Here you can find all my projects and contributions to other
+            projects. Feel free to check them out!
+          </p>
+          <a href="https://github.com/tombenrex/"
+            >Click here to visit my GitHub</a
+          >
+        </article>
+        <section class="map">
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=16.97018623352051%2C59.35752099459053%2C17.083482742309574%2C59.39494703552633&amp;layer=mapnik&amp;marker=59.37623917736809%2C17.02683448791504"
+            title="Location where I live"
+          ></iframe>
+        </section>
+        <section class="cv">
+          <h1 class="heading">Cv</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Job title</th>
+                <th>Company</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Operator</td>
+                <td>Idemia</td>
+                <td>2022-06 / 2024-05</td>
+              </tr>
+              <tr>
+                <td>Shop assistant</td>
+                <td>OKQ8</td>
+                <td>2021-05 / 2024-03</td>
+              </tr>
+              <tr>
+                <td>Property host</td>
+                <td>Jourbilsgruppen</td>
+                <td>2019-04 / 2021-05</td>
+              </tr>
+              <tr>
+                <td>Mold remediation</td>
+                <td>Avfuktningsteknik</td>
+                <td>2019-09 / 2019-12</td>
+              </tr>
+              <tr>
+                <td>Mover transport</td>
+                <td>Davens Åkeri & Flyttekspressen</td>
+                <td>2018-11 / 2019-09</td>
+              </tr>
+              <tr>
+                <td>Construction consultancy</td>
+                <td>Beijer Bygg</td>
+                <td>2018-05 / 2018-11</td>
+              </tr>
+              <tr>
+                <td>Carpenter</td>
+                <td>Skanska</td>
+                <td>2011-06 / 2018-05</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th colspan="3">2011 - 2024</th>
+              </tr>
+            </tfoot>
+          </table>
+          <a href="#" id="pdf-link" title="Open a popup (modal)">
+            More info
+            <i class="fa-solid fa-file-pdf fa-xl"></i>
+          </a>
+          <div
+            id="pdfModal"
+            class="modal"
+            role="dialog"
+            aria-hidden="true"
+            tabindex="-1"
+            style="display: none"
+          >
+            <div class="modal-content">
+              <button class="close" aria-label="Close">&times;</button>
+              <iframe
+                class="pdf-iframe"
+                id="pdfFrame"
+                data-src="pdf/cv.pdf"
+                title="PDF Document"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="socials">
+        <a
+          href="https://www.linkedin.com/in/tmlsn/"
+          target="_blank"
+          title="My Linked In Page (Opens in new tab)"
+        >
+          tmlsn<i class="fa-brands fa-linkedin fa-xl"></i>
+        </a>
+        <a
+          href="https://github.com/tombenrex/"
+          target="_blank"
+          title="My GitHub (Opens in new tab)"
+        >
+          tombenrex<i class="fa-brands fa-github fa-xl"></i>
+        </a>
+        <a
+          href="mailto:92tomlar@skola.boras.se"
+          target="_blank"
+          title="Opens your email client"
+        >
+          Contact Me<i class="fa-regular fa-envelope fa-xl"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

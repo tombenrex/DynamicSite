@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  color: #fff;
+  background: url("../img/about.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid #ffffff45;
+  box-shadow: 0px 20px 19px 3px rgb(0 0 0 / 34%);
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.title-holder {
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-title,
+.page-title-2 {
+  font-family: Mea Culpa;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.page-title-2 {
+  margin-left: 3rem;
+  margin-top: -1rem;
+}
+
+.navbar {
+  padding: 0.6rem 1.2rem 0.6rem 0.2rem;
+}
+
+.navbar i,
+.navbar a {
+  margin-left: 0.2rem;
+  padding: 0.1rem;
+  font-size: 1.4rem;
+}
+
+#pdf-link,
+.navbar a {
+  border: 0.1rem solid #ffffff42;
+  padding: 0.3rem;
+  background: linear-gradient(39deg, #000, #ffffff38, #000);
+  border-radius: 5px;
+}
+
+.menu-toggle-btn {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+main {
+  padding: 4rem 0 10rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 2fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  max-width: 1200px;
+}
+
+.about-card {
+  grid-area: 1 / 1 / 2 / 2;
+  padding: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.459);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text {
+  margin: 1rem 0;
+  max-width: 300px;
+}
+
+.round {
+  padding: 0.5rem;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+img.round {
+  height: 200px;
+  border-radius: 50%;
+}
+
+img.sign:hover {
+  width: 150px;
+  transform: rotate(360deg);
+  transition: 2.5s;
+}
+
+.sign {
+  width: 150px;
+}
+
+.img-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3rem;
+}
+
+.github-card {
+  grid-area: 1 / 3 / 2 / 4;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.github-logo {
+  margin-top: -2rem;
+}
+
+.github-card p {
+  max-width: 300px;
+}
+
+.github-card h2 {
+  font-family: "Mea culpa";
+  font-size: 3rem;
+  color: #fff;
+  margin-left: -8rem;
+}
+
+.github-card a {
+  padding: 0.5rem;
+  margin: 2rem 0 0 0;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: 0px 8px 8px 0 rgba(0, 0, 0, 0.459);
+}
+
+:where(.github-card a, footer a):hover {
+  background-color: #ffffff28;
+}
+
+:where(.about-card, .github-card) {
+  background: #00000061;
+}
+
+.about-card,
+.map,
+.github-card,
+table {
+  box-shadow: 0px 0px 12px 3px rgb(255 255 255 / 10%);
+}
+
+img.github-logo {
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.144);
+}
+
+.map {
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.cv {
+  grid-area: 2 / 1 / 3 / 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.heading {
+  font-family: "Mea culpa";
+  font-size: 4rem;
+}
+
+table {
+  margin-bottom: 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.623);
+  letter-spacing: 2px;
+  background-color: rgba(0, 0, 0, 0.212);
+  border-radius: 10px;
+  text-transform: capitalize;
+  width: 100%;
+  height: 100%;
+}
+
+thead,
+tfoot {
+  background-color: rgba(255, 255, 255, 0.384);
+}
+
+th,
+td {
+  border: 1px solid rgba(255, 255, 255, 0.733);
+  padding: 8px 10px;
+}
+
+td:last-of-type {
+  text-align: center;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgba(255, 255, 255, 0.199);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+tfoot td {
+  font-weight: bold;
+}
+
+.navbar a:hover,
+#pdf-link:hover {
+  background-color: #ffffff83;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  box-shadow: 0px 11px 14px 9px rgba(0, 0, 0, 0.459);
+  border-top: 1px solid #ffffff78;
+  background: linear-gradient(342deg, #000, #ffffff36, #000);
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.socials a {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  box-shadow: 0px 8px 8px 0 rgba(0, 0, 0, 0.459);
+}
+
+.fa-xl {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 800px) {
+  main {
+    padding: 1rem;
+    margin: 2rem 0 10rem 0;
+  }
+  header {
+    align-items: normal;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu-toggle-btn {
+    display: block;
+  }
+
+  .navbar.visible {
+    display: flex;
+    align-items: stretch;
+    position: absolute;
+    border: 1px solid #fff;
+    background-color: #000;
+    padding: 0.5rem 3rem 0.5rem 0.4rem;
+    gap: 0.5rem;
+  }
+
+  .navbar a {
+    text-align: center;
+    border: 1px solid #fff;
+  }
+
+  .map {
+    height: 300px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: 20px;
+  }
+
+  .about-card {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .github-card {
+    grid-area: 4 / 1 / 5 / 2;
+    margin-top: 3rem;
+    border-radius: 63%;
+    padding: 3rem;
+  }
+
+  .map {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  .cv {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+
+  .text {
+    max-width: 90%;
+    font-size: 1rem;
+  }
+
+  img.github-logo {
+    width: 80%;
+    height: auto;
+  }
+
+  table {
+    width: 100%;
+    font-size: 0.8rem;
+    letter-spacing: normal;
+    table-layout: auto;
+  }
+}
