@@ -1,3 +1,15 @@
+/*=========== TABLE OF CONTENTS ===========
+1.  Grid-container
+2.  Main
+3.  Form
+4.  Hover Effects
+5.  Media Queries
+=========================================*/
+
+/*-------------------------------------
+  1. Grid-container
+--------------------------------------*/
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -8,7 +20,9 @@
     " footer ";
   min-height: 100vh;
 }
-
+/*-------------------------------------
+  2. Main
+--------------------------------------*/
 main {
   display: flex;
   grid-area: main;
@@ -16,6 +30,10 @@ main {
   align-items: center;
   justify-content: space-evenly;
 }
+
+/*-------------------------------------
+  3. Form
+--------------------------------------*/
 
 .text-holder {
   height: auto;
@@ -44,7 +62,7 @@ textarea {
   background-color: #ffffff78;
 }
 
-input[type="submit"] {
+/* input[type="submit"] {
   background-color: #ffffff78;
   color: #ffffff;
   padding: 12px 20px;
@@ -52,14 +70,38 @@ input[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
 }
-
-input[type="submit"]:hover {
+ */
+/* input[type="submit"]:hover {
   background: #999999;
-}
+} */
 
 #message {
   height: 200px;
 }
+
+/*-------------------------------------
+  4. Hover Effects
+--------------------------------------*/
+
+.submit:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1),
+    inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.submit {
+  padding: 18px;
+  font-family: "Open Sans";
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+/*-------------------------------------
+  5. Media Queries
+--------------------------------------*/
 
 @media (max-width: 768px) {
   main {
