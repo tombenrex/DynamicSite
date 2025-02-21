@@ -184,7 +184,7 @@ main {
 }
 
 .img-frame {
-  background-image: url("/img/tom.png");
+  background-image: url(../img/tom.png);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
