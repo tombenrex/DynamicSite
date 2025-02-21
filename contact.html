@@ -5,49 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>| Contact |</title>
     <link rel="stylesheet" href="css/contact.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <script
-      src="https://kit.fontawesome.com/70f7a209bd.js"
-      crossorigin="anonymous"
-    ></script>
+    <link rel="stylesheet" href="css/head-foot.css" />
+    <script src="https://kit.fontawesome.com/70f7a209bd.js"></script>
     <script src="js/nav-bar.js" defer></script>
   </head>
 
   <body>
+    <!-- Grid Container -->
+    <div class="grid-container">
     <!-- Header -->
     <header>
-      <div class="title-holder">
-        <a href="index.html" class="page-title">Toms Cv</a>
-        <a href="index.html" class="page-title-2">& Projects</a>
+      <div class="title">TomBenRex</div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html" style=>Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a class="imhere" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="social-links">
+        <a
+          href="https://github.com/tombenrex/"
+          target="_blank"
+          title="My GitHub (Opens in new tab)"
+          ><i class="fa-brands fa-square-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/tmlsn/"
+          target="_blank"
+          title="My Linked In Page (Opens in new tab)"
+          ><i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a
+          href="mailto:92tomlar@skola.boras.se"
+          target="_blank"
+          title="Opens your email client"
+          ><i class="fa-solid fa-envelope"></i>
+        </a>
       </div>
 
-      <!-- Nav -->
-      <nav class="navbar">
-        <a href="index.html">Home<i class="fa-solid fa-house"></i></a>
-        <a href="about.html">About<i class="fa-solid fa-address-card"></i></a>
-        <a href="contact.html"
-          >Contact<i class="fa-solid fa-address-book" style="color: #fff200"></i
-        ></a>
-      </nav>
       <button class="menu-toggle-btn">
         <i class="nav-toggle fa-solid fa-bars xl"></i>
       </button>
     </header>
 
-    <!-- Main -->
+    <!-- Main content -->
     <main>
       <section class="top-section">
         <div class="text-holder">
@@ -71,7 +74,6 @@
               id="message"
               name="message"
               placeholder="Send me a message"
-              style="height: 200px"
               required
             ></textarea>
             <input type="submit" value="Submit" />
@@ -79,30 +81,9 @@
         </div>
       </section>
     </main>
-
-    <!-- Footer -->
     <footer>
-      <div class="socials">
-        <a
-          href="https://www.linkedin.com/in/tmlsn/"
-          target="_blank"
-          title="My Linked In Page (Opens in new tab)"
-        >
-          <i class="fa-brands fa-linkedin fa-xl"></i>
-        </a>
-        <a
-          href="https://github.com/tombenrex/"
-          target="_blank"
-          title="My GitHub (Opens in new tab)"
-          ><i class="fa-brands fa-github fa-xl"></i>
-        </a>
-        <a
-          href="mailto:92tomlar@skola.boras.se"
-          target="_blank"
-          title="Opens your email client"
-          ><i class="fa-regular fa-envelope fa-xl"></i>
-        </a>
-      </div>
+      <p>&copy; 2025 TomBenRex. All Rights Reserved.</p>
     </footer>
+    </div>
   </body>
 </html>

@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/*=========== TABLE OF CONTENTS ===========
+1. General css
+2. Header // Nav // Social-links
+3. Body // Main
+4. Footer
+5. Media Queries
+
+=========================================*/
+
+/*-------------------------------------
+  1. General css 
+--------------------------------------*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*-------------------------------------
+ 2. Header // Nav // Social-links
+--------------------------------------*/
+
+.imhere {
+  color: #fff;
+}
+
+header {
+  border-radius: 0 0 85% 85% / 30%;
+  display: inline-grid;
+  align-items: center;
+}
+
+nav {
+  position: relative;
+  grid-area: 1 / 1 / 4 / 4;
+  mask-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    #ffffff 25%,
+    #ffffff 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+nav ul {
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 25%,
+    rgba(255, 255, 255, 0.2) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1),
+    inset 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 18px;
+  font-family: "Open Sans";
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
+}
+
+.card-links a:hover,
+.social-links a:hover,
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1),
+    inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.title {
+  grid-area: 1 / 1;
+  font-size: 1.5rem;
+  font-family: "Bree Serif", serif;
+  text-transform: uppercase;
+  margin-left: 1rem;
+}
+
+.navbar .button {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+}
+
+.menu-toggle-btn {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.social-links {
+  grid-area: 1 / 3;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.social-links a {
+  padding: 10px;
+  color: #000;
+  font-size: 27px;
+  text-decoration: none;
+}
+
+/*-------------------------------------
+    3.Body // Main
+  --------------------------------------*/
+
+body {
+  background-image: linear-gradient(to right, #b6fbff8e, #83a3d48d);
+  backdrop-filter: blur(10px);
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+}
+
+/*-------------------------------------
+	4.Footer 
+--------------------------------------*/
+
+footer {
+  grid-area: footer;
+  text-align: center;
+}
+
+/*-------------------------------------
+    5.Media Queries
+--------------------------------------*/
+
+@media (max-width: 768px) {
+  .navbar.visible {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .navbar.visible ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #b6fbff, #83a4d4);
+  }
+
+  .menu-toggle-btn {
+    display: block;
+  }
+
+  .social-links {
+    display: none;
+  }
+
+  nav {
+    mask-image: none;
+    display: none;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 968px) {
+  .navbar.visible {
+    display: flex;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .navbar.visible ul {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #b6fbff, #83a4d4);
+  }
+  .menu-toggle-btn {
+    display: block;
+  }
+
+  .social-links {
+    display: none;
+  }
+}
