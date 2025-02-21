@@ -13,77 +13,79 @@
   <body>
     <!-- Grid Container -->
     <div class="grid-container">
-    <!-- Header -->
-    <header>
-      <div class="title">TomBenRex</div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html" style=>Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a class="imhere" href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="social-links">
-        <a
-          href="https://github.com/tombenrex/"
-          target="_blank"
-          title="My GitHub (Opens in new tab)"
-          ><i class="fa-brands fa-square-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/tmlsn/"
-          target="_blank"
-          title="My Linked In Page (Opens in new tab)"
-          ><i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a
-          href="mailto:92tomlar@skola.boras.se"
-          target="_blank"
-          title="Opens your email client"
-          ><i class="fa-solid fa-envelope"></i>
-        </a>
-      </div>
-
-      <button class="menu-toggle-btn">
-        <i class="nav-toggle fa-solid fa-bars xl"></i>
-      </button>
-    </header>
-
-    <!-- Main content -->
-    <main>
-      <section class="top-section">
-        <div class="text-holder">
-          <h2>Feel free and send me a message</h2>
-          <p>Only kindly messages are accepted (:</p>
+      <!-- Header -->
+      <header>
+        <div class="title">TomBenRex</div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a class="imhere" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="social-links">
+          <a
+            href="https://github.com/tombenrex/"
+            target="_blank"
+            title="My GitHub (Opens in new tab)"
+            ><i class="fa-brands fa-square-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/tmlsn/"
+            target="_blank"
+            title="My Linked In Page (Opens in new tab)"
+            ><i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a
+            href="mailto:92tomlar@skola.boras.se"
+            target="_blank"
+            title="Opens your email client"
+            ><i class="fa-solid fa-envelope"></i>
+          </a>
         </div>
-        <div class="form-container">
-          <form action="http://www.tompaslife.se/submit_form.php" method="POST">
-            <!-- Me try to back-end  -->
+        <button class="menu-toggle-btn">
+          <i class="nav-toggle fa-solid fa-bars xl"></i>
+        </button>
+      </header>
 
-            <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Your name.."
-              required
-            />
-            <label for="message">Your message</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Send me a message"
-              required
-            ></textarea>
-            <input class="submit" type="submit" value="Submit" />
-          </form>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2025 TomBenRex. All Rights Reserved.</p>
-    </footer>
+      <!-- Main content -->
+      <main>
+        <section class="top-section">
+          <div class="text-holder">
+            <h2>Feel free and send me a message</h2>
+            <p>Only kindly messages are accepted (:</p>
+          </div>
+          <div class="form-container">
+            <form
+              action="http://www.tompaslife.se/submit_form.php"
+              method="POST"
+            >
+              <!-- Me try to back-end  -->
+
+              <label for="name">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name.."
+                required
+              />
+              <label for="message">Your message</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Send me a message"
+                required
+              ></textarea>
+              <input class="submit" type="submit" value="Submit" />
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>&copy; 2025 TomBenRex. All Rights Reserved.</p>
+      </footer>
     </div>
   </body>
 </html>
