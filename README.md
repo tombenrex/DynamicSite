@@ -36,50 +36,40 @@
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a> <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> </a> </p>
 
-##
-
 ## Instruktioner
 
-Denna uppgift går ut på att du ska koda upp en enklare webbplats från grunden med HTML och CSS. Det du ska bygga är en CV-sida för dig själva med information om dig, ditt CV, kontaktinformation och en portfolio.
+Denna uppgift bygger vidare på Uppgift 1 och i denna ska du utveckla din CV-sida så den även innehåller JavaScript och blir mer dynamisk.
 
-### Vad du ska göra
+Du får endast utveckla sidan med ren JavaScript (d.v.s Vanilla)
 
-Du ska bygga en enkel webbplats som följer följande kravställningar:
+## Vad du ska göra
 
-### **Navigation**
+Du ska bygga vidare på din CV-sida från Uppgift 2 och nu se till att den även följer följande kravställningar:
 
-- Din webbplats ska bestå av några sidor som besökaren kan navigera sig mellan
-- Du ska ha en meny där användaren kan ta sig runt till alla de olika undersidorna
-- Det ska från alla sidorna gå att komma åt alla andra sidor
-- Det ska synas vilken sida man är på som besökare i menyn
+### **CV i en fil**
 
-### **Innehåll**
+- Dina utbildningar och tidigare arbetsplatser ska inte längre ligga i HTML-koden
+- Vilka utbildningar du läst och vilka tidigare arbeten du haft ska ligga i en separat fil i JSON-format
+- Denna JSON-fil ska läsas och generera ditt CV
 
-- Alla sidorna på webbplatsen ska ha innehåll
-- Innehåll som måste finnas någonstans på webbplatsen är:
-  - En presentation av dig själv
-  - Ditt CV med utbildningar, arbetsplatser m.m (precis som ett vanligt CV)
-  - En kontaktsida med enkla kontaktuppgifter som en mail eller hitta på en adress om det känns bättre. Kanske en google maps som pekar på din hemstad?
-  - En portfolio med projekt du gjort (du kan som minst lägga in skolprojekt du gjort men det kan även var annat)
-- Det ska finnas bilder på sidan, minst en bild men gärna fler.
-- Resterande sidor kan innehålla bara Lorem Ipsum-text eller så hittar du på något värdefullt så som kontaktuppgifter eller något annat som passar på sidan.
+### **Interaktiva scripts**
+
+- Din CV-sida ska innehålla minst ett interaktivt JavaScript-element som du själv har skrivit. Dessutom ska du integrera minst en interaktiv funktion som är baserad på en befintlig ren JavaScript-lösning (ej från ett bibliotek).
+  - Exempel på funktioner kan vara en modal, bildspel, scroll-effekt, eller funktioner för att dölja/visa element.
+  - Var noga med att kommentera din kod för att tydligt ange vilka delar du har skrivit själv och vilka delar som är baserade på externa källor. Ange också källan för den externa koden.
+  - För att hitta lämpliga skript kan du utforska resurser som GitHub, CodePen, eller MDN Web Docs, vilka erbjuder en mängd exempel och kodsnuttar som kan användas som inspiration eller som grund för dina egna projekt."
+- Exempel på funktioner kan vara en modal, bildspel, scroll-effekt, eller funktioner för att dölja/visa element.
+- Var noga med att kommentera din kod för att tydligt ange vilka delar du har skrivit själv och vilka delar som är baserade på externa källor. Ange också källan för den externa koden.
+- För att hitta lämpliga skript kan du utforska resurser som GitHub, CodePen, ell- er MDN Web Docs, vilka erbjuder en mängd exempel och kodsnuttar som kan användas som inspiration eller som grund för dina egna projekt."
 
 ### **Portfolio**
 
-- Din portfolio ska vara en listning av projekt med en rubrik och en bild. *Om du väljer att göra en modal-popup (se Extra utmaningar) kan du sätta en knapp här där besökaren kan klicka på för att få mer information.*
-- Din sida ska ha ett eller flera typsnitt som laddas in från en typnittsfil eller från exempelvis Google Fonts.
-- Sidan ska anpassa sig någorlunda för olika skärmstorlekar så det går att ta del av innehållet utan större problem både i en mobil och i en dator.
+- Det ska finnas en del av din sida som är en portfolio med projekt du byggt.
+- Du publicerar ett fungerande projekt från Workshop JS Code (Fiska Animation kod till exempel)på ditt Githubkonto och inkluderar det i din portfolio.
 
-### **Tekniska krav**
+### Tekniska krav
 
-- Din webbplats ska vara kompatibel med moderna webbläsare och fungera rimligt bra i alla webbläsare som inte är äldre än tre år
-- Din HTML-kod ska vara korrekt när det kommer till semantik (ex. inte layout genom tabeller eller helt ologiska rubriknivåer) och nyttja semantiska taggar som exempelvis <nav>
-- CSS-koden ska ligga i en separat fil
-- Bra namngivning på engelska på alla klasser.
-
-👉 **Extra utmaningar (frivilligt)**
-
-- När knappen för mer information klickas på ska det dyka upp en modal-popup med lite mer information om projektet. Denna ska inte kräva JavaScript utan enbart byggas med HTML & CSS.
-- Lägg till en print-CSS som gör att utskrift av sidan blir snygg
-- Jobba med CSS-animationer
-- Bygg sidan i en light- och en dark-version som automatiskt slås på, enbart med CSS
+- Validerad med 0 fel på [https://validator.w3.org/Links to an external site.](https://validator.w3.org/)
+- Inga errors i Console
+- Webbplatsen ska vara tekniskt optimerad för sökmotorer, vilket inkluderar korrekt användning av semantiska HTML5-element, metataggar som titel och beskrivning och optimerade bilder för snabba laddningstider.
+- I roten i ditt repository ska det finns en README.md-fil skriven i Markdown. I denna fil ska det minst framgå vem som skapat sidan (ditt namn) och länken till den publicerade versionen (t.ex på Github Pages)
