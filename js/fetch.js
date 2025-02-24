@@ -35,6 +35,11 @@ fetch("/json/cv.json")
           </tr>`
         )
         .join(""),
+      json: data.json.map(
+        (jso) => `
+          ${jso.thisis}
+          `
+      ),
     };
 
     // Loop through the sections object and update the corresponding table

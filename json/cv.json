@@ -70,6 +70,8 @@
     }
   ],
   "json": [
-    "This is a fetch from a JSON file containing my CV. The data is fetched using JavaScript and displayed here."
+    {
+      "thisis": "This is a fetch from a JSON file containing my CV. The data is fetched using JavaScript and displayed here."
+    }
   ]
 }

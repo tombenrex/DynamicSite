@@ -1,4 +1,4 @@
-/*=========== TABLE OF CONTENTS ===========
+/*=== TABLE OF CONTENTS | ABOUT.CSS =======
 1.  Grid-container
 2.  Main
 3.  Top Section
@@ -9,6 +9,7 @@
 /*-------------------------------------
   1. Grid-container
 --------------------------------------*/
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -33,13 +34,19 @@ main {
 /*-------------------------------------
   2. Left Section
 --------------------------------------*/
+
+.right-section,
 .left-section {
   display: flex;
-  flex-direction: column;
   padding: 1rem;
   gap: 3rem;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
+
 .mapouter {
   height: 50%;
   width: 100%;
@@ -80,12 +87,6 @@ iframe {
 /*-------------------------------------
   3. Right Section
 --------------------------------------*/
-.right-section {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  align-items: center;
-}
 
 .cv-fetch {
   display: flex;
@@ -122,6 +123,13 @@ tfoot th {
 
 table {
   width: 100%;
+  margin-bottom: 2rem;
+}
+
+#json {
+  text-transform: capitalize;
+  font-style: italic;
+  font-size: 0.9rem;
 }
 
 /*-------------------------------------

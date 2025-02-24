@@ -196,4 +196,8 @@ footer {
   .social-links {
     display: none;
   }
+  nav {
+    mask-image: none;
+    display: none;
+  }
 }
