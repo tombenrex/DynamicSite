@@ -38,15 +38,8 @@ footer {
   grid-area: footer;
 }
 
-.box {
-  background-color: #f8f8f8;
-  border: 1px solid #c91212;
-  height: 50%;
-  width: 100%;
-}
-
 /*-------------------------------------
-  2. Top Section
+  2. Left Section
 --------------------------------------*/
 .left-section {
   display: flex;
@@ -58,6 +51,7 @@ footer {
 .mapouter {
   height: 50%;
   width: 100%;
+  border: 4px solid rgb(255, 255, 255);
 }
 
 iframe {
@@ -73,7 +67,7 @@ iframe {
   justify-content: space-between;
 }
 
-.about-headline {
+.headline {
   display: flex;
   justify-content: center;
 }
@@ -86,24 +80,22 @@ iframe {
   justify-content: flex-end;
 }
 
-/* .map {
-  height: 100%;
-  width: 100%;
-} */
+.about-text a {
+  color: black;
+  text-decoration: underline;
+}
 
 /*-------------------------------------
-  3. Low Section
+  3. Right Section
 --------------------------------------*/
 .right-section {
-  height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   padding: 1rem;
   align-items: center;
 }
 
-.cv-box {
+.cv-fetch {
   height: 100%;
   width: 100%;
 }

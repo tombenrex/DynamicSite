@@ -1,35 +1,53 @@
 {
-  "name": "Tom",
-  "title": "Front-End Developer",
-  "contact": {
-    "email": "92tomlar@skola.boras.se",
-    "phone": "+46 72 212 1301",
-    "location": "Strängnäs, Sweden",
-    "linkedin": "https://www.linkedin.com/in/tmlsn/",
-    "github": "https://github.com/tombenrex/"
-  },
-  "summary": "Aspiring front-end developer studying at Yrkeshögskolan in Borås. Passionate about responsive web design and modern JavaScript frameworks.",
-  "skills": ["HTML", "CSS", "JavaScript", "Git"],
   "experience": [
     {
-      "position": "Operator",
+      "title": "Operator",
       "company": "Idemia",
       "location": "Strängnäs, Sweden",
       "start_date": "2022-06",
-      "end_date": "2024-05",
-      "responsibilities": [
-        "Operator of machines",
-        "Production of ID cards",
-        "Production of ATM cards"
-      ]
+      "end_date": "2024-05"
     },
     {
-      "position": "Shop Assistant",
+      "title": "Shop Assistant",
       "company": "Okq8",
       "location": "Strängnäs, Sweden",
       "start_date": "2021-05",
-      "end_date": "2024-03",
-      "responsibilities": ["Customer service", "Cashier", "Sell products"]
+      "end_date": "2024-03"
+    },
+    {
+      "title": "Property Host",
+      "company": "Jourbilsgruppen",
+      "location": "Strängnäs, Sweden",
+      "start_date": "2019-04",
+      "end_date": "2021-05"
+    },
+    {
+      "title": "Mold remediation",
+      "company": "Avfuktningsteknik",
+      "location": "Strängnäs, Sweden",
+      "start_date": "2019-09",
+      "end_date": "2019-12"
+    },
+    {
+      "title": "Mover transport",
+      "company": "Davens Åkeri & Flyttekspressen",
+      "location": "Strängnäs, Sweden",
+      "start_date": "2018-11",
+      "end_date": "2019-09"
+    },
+    {
+      "title": "Construction consultancy",
+      "company": "Beijer Byggmaterial",
+      "location": "Strängnäs, Sweden",
+      "start_date": "2018-05",
+      "end_date": "2018-11"
+    },
+    {
+      "title": "Carpenter",
+      "company": "Skanska",
+      "location": "Strängnäs, Sweden",
+      "start_date": "2011-06",
+      "end_date": "2018-05"
     }
   ],
   "education": [
@@ -38,14 +56,6 @@
       "degree": "Träarbetare, yrkesexamen",
       "start_year": "2009",
       "end_year": "2011"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Personal Portfolio",
-      "description": "A responsive portfolio website showcasing my projects and skills.",
-      "technologies": ["React", "Tailwind", "JavaScript"],
-      "github": "https://github.com/tombenrex/portfolio"
     }
   ],
   "languages": [
@@ -57,5 +67,8 @@
       "name": "English",
       "level": "Fluent"
     }
+  ],
+  "json": [
+    "This is a fetch from a JSON file containing my CV. The data is fetched using JavaScript and displayed here."
   ]
 }

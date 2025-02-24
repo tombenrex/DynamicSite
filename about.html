@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/head-foot.css" />
     <script src="https://kit.fontawesome.com/70f7a209bd.js"></script>
     <script src="js/nav-bar.js" defer></script>
+    <script src="js/fetch.js" defer></script>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -70,10 +71,11 @@
       <!-- Main content -->
       <main>
         <section class="left-section">
-          <div class="about-box">
-            <h1 class="about-headline">About</h1>
+          <h1 class="headline">About</h1>
+          <article class="about-box">
+            <h2 class="about-headline">Tom Larsson</h2>
             <p class="about-text">
-              My name is Tom Larsson and I'm a student at
+              33 years old and I'm a student at
               <a href="https://www.boras.se/yh" target="_blank"
                 >Yrkeshögskolan</a
               >
@@ -85,18 +87,27 @@
               kids, four cats and a horse.
             </p>
             <p class="enjoy">I hope you enjoy my work!</p>
-          </div>
+          </article>
           <div class="mapouter">
             <iframe
               src="https://www.openstreetmap.org/export/embed.html?bbox=16.944437026977543%2C59.35752099459053%2C17.087774276733402%2C59.39494703552633&amp;layer=mapnik"
             ></iframe>
           </div>
-
-          <!--           <div class="box">box2</div> -->
         </section>
-
         <section class="right-section">
-          <div class="cv-box">someting</div>
+          <h1 class="headline">CV</h1>
+          <article class="cv-fetch">
+            <h2>Experience</h2>
+            <div id="experience"></div>
+            <ul></ul>
+
+            <h3>Education</h3>
+            <div id="education"></div>
+
+            <h3>Languages</h3>
+            <ul id="languages"></ul>
+            <p class="about-cv"></p>
+          </article>
         </section>
       </main>
 
