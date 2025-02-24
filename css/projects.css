@@ -1,9 +1,9 @@
-/*=========== TABLE OF CONTENTS ===========
+/*==== TABLE OF CONTENTS | PROJECTS =====
 1.  Grid-container
 2.  Main
-3.  Form
-4.  Hover Effects
-5.  Media Queries
+3.  Color-Box 
+4.  
+5.  
 =========================================*/
 
 /*-------------------------------------
@@ -30,14 +30,40 @@ main {
   justify-content: space-evenly;
 }
 
-header {
-  grid-area: header;
-}
-
 main {
   grid-area: main;
 }
-
-footer {
-  grid-area: footer;
+/*-------------------------------------
+    3. Color-Box
+  --------------------------------------*/
+.color-box {
+  border: 2px solid #000;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
 }
+
+input#color-input {
+  margin: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+}
+
+input#color-submit {
+  margin: 1rem;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+/* .color-change {
+  background-color: #ffb20c00;
+}
+ */
