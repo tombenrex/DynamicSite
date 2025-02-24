@@ -24,18 +24,10 @@
   2. Main
 --------------------------------------*/
 
-header {
-  grid-area: header;
-}
-
 main {
   grid-area: main;
   display: grid;
   grid-template-columns: 1fr 1fr;
-}
-
-footer {
-  grid-area: footer;
 }
 
 /*-------------------------------------
@@ -62,8 +54,8 @@ iframe {
 .about-box {
   display: flex;
   flex-direction: column;
-  height: 50%;
-  width: 80%;
+  max-height: 50%;
+  max-width: 80%;
   justify-content: space-between;
 }
 
@@ -96,10 +88,50 @@ iframe {
 }
 
 .cv-fetch {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  background-color: rgba(255, 255, 255, 0.329);
+  width: 100%;
+  text-transform: capitalize;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead,
+tfoot {
+  background-color: rgba(255, 255, 255, 0.543);
+}
+
+th,
+td {
+  border: 1px solid rgba(255, 255, 255, 0.839);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+tbody > tr:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.139);
+}
+
+tfoot th {
+  text-align: right;
+}
+
+table {
   width: 100%;
 }
 
 /*-------------------------------------
-  4. 
+  4. Media Queries
 --------------------------------------*/
+
+@media (max-width: 768px) {
+  main {
+    display: grid;
+    font-size: 10px;
+    grid-template-columns: 1fr;
+  }
+}

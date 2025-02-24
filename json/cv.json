@@ -24,7 +24,7 @@
     {
       "title": "Mold remediation",
       "company": "Avfuktningsteknik",
-      "location": "Strängnäs, Sweden",
+      "location": "Södertälje, Sweden",
       "start_date": "2019-09",
       "end_date": "2019-12"
     },
@@ -45,14 +45,15 @@
     {
       "title": "Carpenter",
       "company": "Skanska",
-      "location": "Strängnäs, Sweden",
+      "location": "Stockholm, Sweden",
       "start_date": "2011-06",
       "end_date": "2018-05"
     }
   ],
   "education": [
     {
-      "institution": "Teknikgymnasiet, Södertälje",
+      "school": "Teknikgymnasiet",
+      "location": "Södertälje",
       "degree": "Träarbetare, yrkesexamen",
       "start_year": "2009",
       "end_year": "2011"
