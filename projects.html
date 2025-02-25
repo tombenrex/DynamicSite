@@ -9,6 +9,24 @@
     <script src="https://kit.fontawesome.com/70f7a209bd.js"></script>
     <script src="js/nav-bar.js" defer></script>
     <script src="js/color-change.js" defer></script>
+    <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="../img/favicon/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="../img/favicon/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="../img/favicon/favicon-16x16.png"
+  />
+  <link rel="manifest" href="../img/favicon/site.webmanifest" />
   </head>
 
   <body>
@@ -19,7 +37,7 @@
       <div class="title">TomBenRex</div>
       <nav class="navbar">
         <ul>
-          <li><a href="index.html" style=>Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a class="imhere" href="projects.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -55,10 +73,12 @@
       <section class="top-section">
         <div class="color-box">
         <h1>Want to change color?</h1>
-        <p>In box below please choose color</p>
+        <p>In box below please choose</p> <p id=color-updated></p>
         <input type="color" id="color-input" />
+        <p> When you ready press button below</p>
         <button onClick="myFunction()">Change Color</button>
-        <p id="demo"></p>
+        <p class="dont">Warning dont choose #000000!!!</p>
+        
         
 
       </div>

@@ -125,7 +125,7 @@ nav ul li a:hover {
   --------------------------------------*/
 
 body {
-  /*  background-image: linear-gradient(to right, #b6fbff8e, #83a3d48d); */
+  background-image: linear-gradient(to right, #b6fbff8e, #83a3d48d);
   font-family: "Poppins", sans-serif;
   color: #000000;
 }
