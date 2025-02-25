@@ -67,3 +67,19 @@ input#color-submit {
   font-weight: 900;
   font-family: "open sans condensed";
 }
+
+#colorupdated {
+  font-size: 1.5rem;
+  color: green;
+  text-align: center;
+  font-weight: 900;
+  font-family: "open sans condensed";
+}
+
+.color {
+  font-size: 1.5rem;
+  color: #ff0000;
+  text-align: center;
+  font-weight: 900;
+  font-family: "open sans condensed";
+}

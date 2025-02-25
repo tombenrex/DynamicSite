@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TomBenRex Portfolio" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
     <title>| Hidden Page |</title>
     <link rel="stylesheet" href="css/hiddenpage.css" />
     <link rel="stylesheet" href="css/head-foot.css" />
     <script src="https://kit.fontawesome.com/70f7a209bd.js"></script>
     <script src="js/nav-bar.js" defer></script>
+    <script src="js/hidden-page.js" defer></script>
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -72,12 +75,13 @@
 
       <!-- Main content -->
       <main>
-        <section class="top-section">
-          <h1>Congratulation!</h1>
-          <h2>You find a hidden page!</h2>
+        <section id="pop" class="top-section" onmouseover="sliceText()">
+          <h1 id="text">Congratulation! You find a hidden page!</h1>
         </section>
-        <section class="low-section">
-          <img src="" alt="Hidden" />
+        <section class="lower-section">
+          <div id="myElement" class="hidden">
+            <button onclick="goBack()">Go Back</button>
+          </div>
         </section>
       </main>
     </div>
