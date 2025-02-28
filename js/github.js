@@ -1,6 +1,6 @@
 async function fetchGitHubRepos() {
   const response = await fetch("https://api.github.com/users/tombenrex/repos");
-  const repos = await response.json();
+  repos = await response.json();
   const container = document.getElementById("repo-container");
 
   repos.forEach((repo) => {

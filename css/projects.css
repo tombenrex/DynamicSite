@@ -38,7 +38,7 @@ body {
 /*-------------------------------------
     3. Github- Fetch
   --------------------------------------*/
-.repo-container {
+#repo-container {
   border: 2px solid black;
   padding: 2rem;
 }

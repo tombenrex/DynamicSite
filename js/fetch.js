@@ -1,5 +1,5 @@
 // Fetch the JSON data from the specified file
-fetch("/json/cv.json")
+fetch("../json/cv.json")
   .then((response) => response.json()) // Convert the response to JSON format
   .then((data) => {
     // Create an object to store generated HTML for experience and education tables
