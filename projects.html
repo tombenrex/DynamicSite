@@ -10,86 +10,78 @@
     <link rel="stylesheet" href="css/head-foot.css" />
     <script src="https://kit.fontawesome.com/70f7a209bd.js"></script>
     <script src="js/nav-bar.js" defer></script>
-    <script src="js/color-change.js" defer></script>
+    <script src="js/github.js" defer></script>
     <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="../img/favicon/apple-touch-icon.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="../img/favicon/favicon-32x32.png"
-  />
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="../img/favicon/favicon-16x16.png"
-  />
-  <link rel="manifest" href="../img/favicon/site.webmanifest" />
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../img/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../img/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../img/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="../img/favicon/site.webmanifest" />
   </head>
 
   <body>
     <!-- Grid Container -->
     <div class="grid-container">
-    <!-- Header -->
-    <header>
-      <div class="title">TomBenRex</div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a class="imhere" href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="social-links">
-        <a
-          href="https://github.com/tombenrex/"
-          target="_blank"
-          title="My GitHub (Opens in new tab)"
-          ><i class="fa-brands fa-square-github"></i
-        ></a>
-        <a
-          href="https://www.linkedin.com/in/tmlsn/"
-          target="_blank"
-          title="My Linked In Page (Opens in new tab)"
-          ><i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a
-          href="mailto:92tomlar@skola.boras.se"
-          target="_blank"
-          title="Opens your email client"
-          ><i class="fa-solid fa-envelope"></i>
-        </a>
-      </div>
-      <button class="menu-toggle-btn">
-        <i class="nav-toggle fa-solid fa-bars xl"></i>
-      </button>
-    </header>
+      <!-- Header -->
+      <header>
+        <div class="title">TomBenRex</div>
+        <nav class="navbar">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a class="imhere" href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="social-links">
+          <a
+            href="https://github.com/tombenrex/"
+            target="_blank"
+            title="My GitHub (Opens in new tab)"
+            ><i class="fa-brands fa-square-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/tmlsn/"
+            target="_blank"
+            title="My Linked In Page (Opens in new tab)"
+            ><i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a
+            href="mailto:92tomlar@skola.boras.se"
+            target="_blank"
+            title="Opens your email client"
+            ><i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+        <button class="menu-toggle-btn">
+          <i class="nav-toggle fa-solid fa-bars xl"></i>
+        </button>
+      </header>
 
-    <!-- Main content -->
-    <main>
-      <section class="top-section">
-        <div class="color-box">
-        <h1>Want to change color?</h1>
-        <p id="changeColor">In box below please choose a color</p> 
-        <input on type="color" id="colorInput" />
-        <p> When you ready press button below</p>
-        
-        <p class="dont">Warning dont choose #000000!!!</p>
-        <button onClick="myFunction()">Change Color</button>
-       
-      </div>
+      <!-- Main content -->
+      <main>
+        <section class="top-section">
+          <h2>All my projects at Github</h2>
+          <div class="repo-container" id="repo-container"></div>
         </section>
-        </main>
-   
-          
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 TomBenRex. All Rights Reserved.</p>
-    </footer>
+      </main>
+
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2025 TomBenRex. All Rights Reserved.</p>
+      </footer>
+    </div>
   </body>
 </html>

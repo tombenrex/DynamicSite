@@ -1,7 +1,7 @@
 /*==== TABLE OF CONTENTS | PROJECTS =====
 1.  Grid-container
 2.  Main
-3.  Color-Box 
+3.  Github Fetch
 4.  
 5.  
 =========================================*/
@@ -19,6 +19,7 @@
     " footer ";
   min-height: 100vh;
 }
+
 /*-------------------------------------
     2. Main
   --------------------------------------*/
@@ -30,56 +31,19 @@ main {
   justify-content: space-evenly;
 }
 
+body {
+  font-family: poppin;
+}
+
 /*-------------------------------------
-    3. Color-Box
+    3. Github- Fetch
   --------------------------------------*/
-.color-box {
-  border: 2px solid #000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-  background-color: white;
+.repo-container {
+  border: 2px solid black;
+  padding: 2rem;
 }
 
-input#color-input {
-  margin: 1rem;
-  font-size: 1.5rem;
-  text-align: center;
-  width: 100px;
-  height: 50px;
-}
-
-input#color-submit {
-  margin: 1rem;
-  font-size: 1.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #ffffff;
-  color: #000000;
-  border: 2px solid #000;
-  cursor: pointer;
-}
-
-.dont {
-  font-size: 1.5rem;
-  color: red;
-  text-align: center;
-  font-weight: 900;
-  font-family: "open sans condensed";
-}
-
-#colorupdated {
-  font-size: 1.5rem;
-  color: green;
-  text-align: center;
-  font-weight: 900;
-  font-family: "open sans condensed";
-}
-
-.color {
-  font-size: 1.5rem;
-  color: #ff0000;
-  text-align: center;
-  font-weight: 900;
-  font-family: "open sans condensed";
+.repo-card a {
+  text-decoration: none;
+  color: black;
 }
