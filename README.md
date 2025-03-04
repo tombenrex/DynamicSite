@@ -6,12 +6,12 @@
   <img src="img/preview3.png" max-height="600" />
   </p>
 
-
+-->
 
 <p align="center">
-:point_right:<a href="https://tombenrex.github.io/CV-Site/" target="blank">Live Server</a> :point_left:
+:point_right:<a href="https://tombenrex.github.io/CV-V2/" target="blank">Live Server</a> :point_left:
 </p>
- -->
+ 
 
 ##
 
