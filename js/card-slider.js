@@ -15,15 +15,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Skrivit själv
 
-function randomColor() {
+function createColorCycle() {
   const gradients = [
     "linear-gradient(to bottom left, #3700ff77, #9206f6)",
     "linear-gradient(to bottom left, #a3ee84, #037221)",
     "linear-gradient(to bottom left, #ff000057, #eb1919)",
     "linear-gradient(to bottom left, #003cff95, #00aeff)",
   ];
-  return gradients[Math.floor(Math.random() * gradients.length)];
+  let index = 0;
+
+  return function getNextColor() {
+    const color = gradients[index];
+    index = (index + 1) % gradients.length;
+    return color;
+  };
 }
+const getNextColor = createColorCycle();
 
 async function fetchGitHubRepos() {
   const response = await fetch("https://api.github.com/users/tombenrex/repos");
@@ -36,7 +43,7 @@ async function fetchGitHubRepos() {
 
     const projHead = document.createElement("header");
     projHead.classList.add("card-top");
-    projHead.style.background = randomColor();
+    projHead.style.background = getNextColor();
 
     const icon = document.createElement("i");
     icon.classList.add("fa-brands", "fa-js", "fa-2xl");
