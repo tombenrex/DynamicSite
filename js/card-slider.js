@@ -78,7 +78,7 @@ async function fetchGitHubRepos() {
 
     const projTitle = document.createElement("h3");
     projTitle.classList.add("card-title");
-    projTitle.innerHTML = `<a href="${repo.html_url}" target="_blank" title="(Open in new window)" >${repo.name}</a>`;
+    projTitle.innerHTML = `<a href="${repo.html_url}" target="_blank" title="(Open in new window)${repo.created_at}" >${repo.name}</a>`;
 
     const projDes = document.createElement("p");
     projDes.classList.add("card-text");
