@@ -234,9 +234,6 @@ main {
     height: auto;
     width: auto;
   }
-  .carousel {
-    gap: 0;
-  }
 
   .left-box {
     justify-content: center;
@@ -267,7 +264,6 @@ main {
 
   .card {
     max-height: max-content;
-    transform: scale(0.97);
   }
   .card-text {
     font-size: 10px;
