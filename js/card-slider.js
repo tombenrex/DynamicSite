@@ -34,7 +34,7 @@ const getNextColor = createColorCycle();
 
 async function fetchGitHubRepos() {
   const response = await fetch("https://api.github.com/users/tombenrex/repos");
-  repos = await response.json();
+  const repos = await response.json();
   const container = document.getElementById("card-container");
 
   repos.forEach((repo) => {
@@ -45,24 +45,56 @@ async function fetchGitHubRepos() {
     projHead.classList.add("card-top");
     projHead.style.background = getNextColor();
 
-    const icon = document.createElement("i");
-    icon.classList.add("fa-brands", "fa-js", "fa-2xl");
-    projHead.appendChild(icon);
+    if (repo.description.includes("JS")) {
+      const jsIcon = document.createElement("i");
+      jsIcon.classList.add("fa-brands", "fa-js", "fa-2xl");
+      projHead.appendChild(jsIcon);
+    }
+
+    if (repo.description.includes("HTML")) {
+      const htmlIcon = document.createElement("i");
+      htmlIcon.classList.add("fa-brands", "fa-html5", "fa-2xl");
+      projHead.appendChild(htmlIcon);
+    }
+
+    if (repo.description.includes("CSS")) {
+      const cssIcon = document.createElement("i");
+      cssIcon.classList.add("fa-brands", "fa-css", "fa-2xl");
+      projHead.appendChild(cssIcon);
+    }
+
+    if (
+      !repo.description.includes("JS") &&
+      !repo.description.includes("HTML") &&
+      !repo.description.includes("CSS")
+    ) {
+      const defaultIcon = document.createElement("i");
+      defaultIcon.classList.add("fa-solid", "fa-user");
+      projHead.appendChild(defaultIcon);
+    }
 
     const projLow = document.createElement("div");
-    const projTitle = document.createElement("h3");
-    const projDes = document.createElement("p");
-    projTitle.textContent = repo.name;
     projLow.classList.add("card-low");
+
+    const projTitle = document.createElement("h3");
     projTitle.classList.add("card-title");
+    projTitle.innerHTML = `<a href="${repo.html_url}" target="_blank" title="(Open in new window)" >${repo.name}</a>`;
+
+    const projDes = document.createElement("p");
     projDes.classList.add("card-text");
     projDes.textContent = repo.description;
 
-    projLow.appendChild(projTitle);
-    projLow.appendChild(projDes);
-    projArticle.appendChild(projHead);
-    projArticle.appendChild(projLow);
+    const projLinks = document.createElement("div");
+    projLinks.classList.add("card-links");
 
+    if (repo.homepage) {
+      projLinks.innerHTML = `<a href="${repo.homepage}" target="_blank" title="(Open in new window)">Visit Live Server <i class="fa-solid fa-laptop-code"></i></a>`;
+    } else {
+      projLinks.textContent = "No live server avaliable";
+    }
+
+    projLow.append(projTitle, projDes, projLinks);
+    projArticle.append(projHead, projLow);
     container.appendChild(projArticle);
   });
 }

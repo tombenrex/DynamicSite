@@ -143,11 +143,13 @@ main {
   justify-content: center;
 }
 
-.card-top .fa-brands {
+.card-top .fa-brands,
+.fa-user {
   font-size: 80px;
   color: #fff;
   margin: 3px;
 }
+
 .card-low {
   height: 50%;
   display: flex;
@@ -162,6 +164,15 @@ main {
 .card-title {
   font-family: "open sans";
   font-size: 20px;
+}
+
+.card-title a {
+  text-decoration: none;
+  color: #000;
+}
+
+.card-title a:hover {
+  color: #0aaae9;
 }
 
 .card-text {
