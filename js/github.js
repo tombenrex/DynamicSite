@@ -10,9 +10,13 @@ async function fetchGitHubRepos() {
             <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
             <p>${repo.description || "No description available"}</p>
             <p>⭐ ${repo.stargazers_count} | 🍴 ${repo.forks_count}</p>
+            
+            
         `;
     container.appendChild(repoCard);
   });
 }
+
+const projectcard = getElementById("repo-card");
 
 fetchGitHubRepos();

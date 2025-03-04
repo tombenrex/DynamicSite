@@ -1,3 +1,4 @@
+// Skrivt själv
 const menuButton = document.querySelector(".menu-toggle-btn");
 const navigationMenu = document.querySelector(".navbar");
 
@@ -11,7 +12,7 @@ menuButton.addEventListener("click", (event) => {
   toggleMenuVisibility();
 });
 
-// Hide menu when clicking outside
+// Hide menu when clicking outside // Copilot
 document.addEventListener("click", (event) => {
   if (
     !navigationMenu.contains(event.target) &&
