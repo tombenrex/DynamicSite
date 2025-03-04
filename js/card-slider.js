@@ -1,3 +1,4 @@
+// GPT
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.querySelector(".carousel");
   const prevBtn = document.getElementById("prev");
@@ -11,3 +12,52 @@ document.addEventListener("DOMContentLoaded", function () {
     carousel.scrollBy({ left: -300, behavior: "smooth" });
   });
 });
+
+// Skrivit själv
+
+function randomColor() {
+  const gradients = [
+    "linear-gradient(to bottom left, #3700ff77, #9206f6)",
+    "linear-gradient(to bottom left, #a3ee84, #037221)",
+    "linear-gradient(to bottom left, #ff000057, #eb1919)",
+    "linear-gradient(to bottom left, #003cff95, #00aeff)",
+  ];
+  return gradients[Math.floor(Math.random() * gradients.length)];
+}
+
+async function fetchGitHubRepos() {
+  const response = await fetch("https://api.github.com/users/tombenrex/repos");
+  repos = await response.json();
+  const container = document.getElementById("card-container");
+
+  repos.forEach((repo) => {
+    const projArticle = document.createElement("article");
+    projArticle.classList.add("card");
+
+    const projHead = document.createElement("header");
+    projHead.classList.add("card-top");
+    projHead.style.background = randomColor();
+
+    const icon = document.createElement("i");
+    icon.classList.add("fa-brands", "fa-js", "fa-2xl");
+    projHead.appendChild(icon);
+
+    const projLow = document.createElement("div");
+    const projTitle = document.createElement("h3");
+    const projDes = document.createElement("p");
+    projTitle.textContent = repo.name;
+    projLow.classList.add("card-low");
+    projTitle.classList.add("card-title");
+    projDes.classList.add("card-text");
+    projDes.textContent = repo.description;
+
+    projLow.appendChild(projTitle);
+    projLow.appendChild(projDes);
+    projArticle.appendChild(projHead);
+    projArticle.appendChild(projLow);
+
+    container.appendChild(projArticle);
+  });
+}
+
+fetchGitHubRepos();

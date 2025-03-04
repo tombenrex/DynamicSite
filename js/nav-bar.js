@@ -6,9 +6,8 @@ const toggleMenuVisibility = function () {
   navigationMenu.classList.toggle("visible");
 };
 
-// Toggle menu when clicking the button
 menuButton.addEventListener("click", (event) => {
-  event.stopPropagation(); // Prevent the document click from closing it immediately
+  event.stopPropagation();
   toggleMenuVisibility();
 });
 

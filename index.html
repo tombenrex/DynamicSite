@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="TomBenRex Portfolio" />
-    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="keywords" content="Homepage, CSS Cards, Portfolio" />
 
     <title>TomBenRex Portfolio</title>
     <link rel="stylesheet" href="css/index.css" />
@@ -38,7 +38,7 @@
     <div class="grid-container">
       <!-- Header -->
       <header>
-        <div class="title">TomBenRex</div>
+        <h1 class="title">TomBenRex</h1>
         <nav class="navbar">
           <ul>
             <li>
@@ -78,11 +78,14 @@
       <!-- Main Content -->
       <main>
         <section class="top-section">
-          <div class="left-box">
-            <div class="img-frame"></div>
-          </div>
+          <h2 class="section-heading">
+            <i class="fa-solid fa-arrow-down"></i>This is Me
+          </h2>
+          <aside class="left-box">
+            <figure class="img-frame" aria-label="Profile image"></figure>
+          </aside>
           <article class="right-box">
-            <h2 class="welcome-txt">Welcome to My Portfolio</h2>
+            <h3 class="welcome-txt">Welcome to My Portfolio</h3>
             <p class="about-me">
               Here you can find all the projects I have worked on. I am upcoming
               developer and designer with a passion for creating beautiful and
@@ -90,116 +93,17 @@
               contact me if you have any questions.
             </p>
           </article>
-
-          <div class="img-container">
-            <div class="overlay"></div>
-          </div>
         </section>
 
         <!-- Portfolio Cards Section -->
         <section class="low-section">
+          <h2 class="low-section-heading">My Projects</h2>
           <div class="wrapper">
-            <button id="prev">&#10094;</button>
-            <div class="carousel">
-              <!-- Card 1 -->
-              <div class="card">
-                <div class="card-top card1">
-                  <i class="fa-brands fa-css fa-2xl"></i>
-                  <i class="fa-brands fa-html5 fa-2xl"></i>
-                </div>
-                <div class="card-low">
-                  <h2 class="card-headline">Project 1</h2>
-                  <h3 class="card-title">Login Page</h3>
-                  <p class="card-text">
-                    A simple login page created with HTML and CSS. The page is
-                    responsive and has a simple design.
-                  </p>
-                  <div class="card-links">
-                    <a
-                      href="https://github.com/tombenrex/Login-Page.git"
-                      target="_blank"
-                      >Repositori<i class="fa-brands fa-square-github"></i></a
-                    ><a href="https://tombenrex.github.io/Login-Page/"
-                      >Live Demo<i class="fa-solid fa-laptop-code"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 2 -->
-              <div class="card">
-                <div class="card-top card2">
-                  <i class="fa-brands fa-js fa-2xl"></i>
-                  <i class="fa-brands fa-css fa-2xl"></i>
-                  <i class="fa-brands fa-html5 fa-2xl"></i>
-                </div>
-                <div class="card-low">
-                  <h2 class="card-headline">Project 2</h2>
-                  <h3 class="card-title">CV Site</h3>
-                  <p class="card-text">
-                    My first portfolio site. Created with HTML and CSS. A navbar
-                    menu connected to JS and some iframes.
-                  </p>
-                  <div class="card-links">
-                    <a
-                      href="https://github.com/tombenrex/CV-Site"
-                      target="_blank"
-                      >Repositori<i class="fa-brands fa-square-github"></i></a
-                    ><a
-                      href="https://tombenrex.github.io/CV-Site/"
-                      target="_blank"
-                      >Live Demo<i class="fa-solid fa-laptop-code"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 3 -->
-              <div class="card">
-                <div class="card-top card3">
-                  <i class="fa-brands fa-js fa-2xl"></i>
-                  <i class="fa-brands fa-css fa-2xl"></i>
-                  <i class="fa-brands fa-html5 fa-2xl"></i>
-                </div>
-                <div class="card-low">
-                  <h2 class="card-headline">Project 3</h2>
-                  <h3 class="card-title">CV SITE V2</h3>
-                  <p class="card-text">
-                    A update from previous project. This time adding javascript
-                    and JSON.
-                  </p>
-                  <div class="card-links">
-                    <a
-                      href="https://github.com/tombenrex/CV-V2.git"
-                      target="_blank"
-                      >Repositori<i
-                        class="fa-brands fa-square-github fa"
-                      ></i></a
-                    ><a href="https://tombenrex.github.io/CV-V2/"
-                      >Live Demo<i class="fa-solid fa-laptop-code fa"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-              <!-- Card 4 -->
-              <div class="card">
-                <div class="card-top card4">
-                  <i class="fa-brands fa-css fa-2xl"></i>
-                  <i class="fa-brands fa-html5 fa-2xl"></i>
-                </div>
-                <div class="card-low">
-                  <h2 class="card-headline">Project 4</h2>
-                  <h3 class="card-title">Not ready</h3>
-                  <p class="card-text">Comming soon</p>
-                  <div class="card-links">
-                    <a href="#"
-                      >Repositori<i class="fa-brands fa-square-github"></i></a
-                    ><a href="#"
-                      >Live Demo<i class="fa-solid fa-laptop-code"></i
-                    ></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <button id="next">&#10095;</button>
+            <button id="prev" aria-label="Previous card button">
+              &#10094;
+            </button>
+            <div class="carousel" id="card-container"></div>
+            <button id="next" aria-label="next card button">&#10095;</button>
           </div>
         </section>
       </main>

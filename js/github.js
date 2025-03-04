@@ -17,6 +17,4 @@ async function fetchGitHubRepos() {
   });
 }
 
-const projectcard = getElementById("repo-card");
-
 fetchGitHubRepos();

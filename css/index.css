@@ -38,12 +38,25 @@ main {
 --------------------------------------*/
 
 .top-section {
-  display: flex;
-  align-items: center;
+  display: inline-grid;
+  grid-template-columns: repeat(3, auto);
 }
 
-.right-box h2 {
+.welcome-txt {
   margin-bottom: 1rem;
+}
+
+.section-heading {
+  font-family: "Great Vibes", cursive;
+  display: flex;
+  padding-top: 1rem;
+  margin-left: -2rem;
+  grid-area: 1/2;
+}
+
+.fa-arrow-down {
+  font-size: 2rem;
+  transform: rotate(40deg);
 }
 
 .about-me {
@@ -79,25 +92,16 @@ main {
 --------------------------------------*/
 
 .low-section {
-  display: flex;
-  justify-content: center;
   width: 50%;
+}
+.low-section-heading {
+  text-align: center;
+  padding-top: 1rem;
 }
 
 .wrapper {
   display: inline-grid;
   position: relative;
-}
-
-.carousel {
-  display: flex;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  gap: 20px;
-  width: 80vw;
-  max-width: 1200px;
-  justify-content: center;
-  padding: 15px;
 }
 
 .carousel::-webkit-scrollbar {
@@ -128,19 +132,6 @@ main {
 
 .card:hover {
   transform: scale(1.05);
-}
-
-.card1 {
-  background: linear-gradient(to bottom left, #3700ff77, #9206f6);
-}
-.card2 {
-  background: linear-gradient(to bottom left, #a3ee84, #037221);
-}
-.card3 {
-  background: linear-gradient(to bottom left, #ff000057, #eb1919);
-}
-.card4 {
-  background: linear-gradient(to bottom left, #003cff95, #00aeff);
 }
 
 .card-top {
@@ -231,14 +222,20 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
   }
-  .carousel {
-    height: 100%;
+  .section-heading {
+    display: none;
+  }
+  .img-frame {
+    display: none;
   }
 
   .top-section {
     flex-direction: column;
     height: auto;
     width: auto;
+  }
+  .carousel {
+    gap: 0;
   }
 
   .left-box {
@@ -269,9 +266,8 @@ main {
   }
 
   .card {
-    min-width: 80%;
     max-height: max-content;
-    transform: scale(0.9);
+    transform: scale(0.97);
   }
   .card-text {
     font-size: 10px;
@@ -293,7 +289,7 @@ main {
   }
 }
 
-@media (orientation: landscape) and (max-width: 968px) {
+@media (orientation: landscape) and (max-width: 868px) {
   .img-frame {
     height: 100px;
     width: 100px;
@@ -320,7 +316,6 @@ main {
 
   .card {
     height: 300px;
-    transform: none;
   }
 
   .wrapper {
@@ -328,7 +323,10 @@ main {
     position: static;
   }
   .low-section {
-    height: 100%;
+    width: auto;
+  }
+  .low-section-heading {
+    padding: 0;
   }
 
   #next,
@@ -337,7 +335,8 @@ main {
   }
 
   main {
-    flex-direction: row-reverse;
+    display: grid;
+    grid-template-columns: auto auto;
   }
 
   .card-headline {
@@ -350,5 +349,11 @@ main {
 
   .card-text {
     font-size: 12px;
+  }
+  .section-heading {
+    display: none;
+  }
+  .img-frame {
+    display: none;
   }
 }
