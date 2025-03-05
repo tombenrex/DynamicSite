@@ -11,16 +11,32 @@ document.addEventListener("DOMContentLoaded", function () {
   prevBtn.addEventListener("click", () => {
     carousel.scrollBy({ left: -300, behavior: "smooth" });
   });
+
+  // Skrivit själv
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowLeft") {
+      carousel.scrollBy({ left: -300, behavior: "smooth" });
+    } else if (event.key === "ArrowRight") {
+      carousel.scrollBy({ left: 300, behavior: "smooth" });
+    }
+  });
 });
 
 // Skrivit själv
+function loadingDone() {
+  const loadingText = document.getElementById("loading");
+  if (loadingText) {
+    loadingText.style.display = "none";
+  }
+}
 
 function createColorCycle() {
   const gradients = [
-    "linear-gradient(to bottom left, #3700ff77, #9206f6)",
-    "linear-gradient(to bottom left, #a3ee84, #037221)",
+    "linear-gradient(to bottom left, #3700ff77,rgb(151, 93, 245))",
+    "linear-gradient(to bottom left,rgb(30, 97, 1),rgb(19, 255, 82))",
     "linear-gradient(to bottom left, #ff000057, #eb1919)",
     "linear-gradient(to bottom left, #003cff95, #00aeff)",
+    "linear-gradient(to bottom left,rgba(145, 61, 5, 0.58),rgb(255, 136, 0))",
   ];
   let index = 0;
 
@@ -78,7 +94,7 @@ async function fetchGitHubRepos() {
 
     const projTitle = document.createElement("h3");
     projTitle.classList.add("card-title");
-    projTitle.innerHTML = `<a href="${repo.html_url}" target="_blank" title="(Open in new window)${repo.created_at}" >${repo.name}</a>`;
+    projTitle.innerHTML = `<a href="${repo.html_url}" target="_blank" title="(Open in new window)" >${repo.name}</a>`;
 
     const projDes = document.createElement("p");
     projDes.classList.add("card-text");
@@ -88,7 +104,7 @@ async function fetchGitHubRepos() {
     projLinks.classList.add("card-links");
 
     if (repo.homepage) {
-      projLinks.innerHTML = `<a href="${repo.homepage}" target="_blank" title="(Open in new window)">Visit Live Server <i class="fa-solid fa-laptop-code"></i></a>`;
+      projLinks.innerHTML = `<a href="${repo.homepage}" target="_blank" title="(Open in new window)">Checkout Preview <i class="fa-solid fa-laptop-code"></i></a>`;
     } else {
       projLinks.textContent = "No live server avaliable";
     }
@@ -96,6 +112,7 @@ async function fetchGitHubRepos() {
     projLow.append(projTitle, projDes, projLinks);
     projArticle.append(projHead, projLow);
     container.appendChild(projArticle);
+    loadingDone();
   });
 }
 
