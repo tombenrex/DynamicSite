@@ -1,12 +1,16 @@
+<!--
+
 <p align="center">
  <img src="img/preview1.png" max-height="600"  />
 
+
   </p>
 
-<p align="center">
-:point_right:<a href="https://tombenrex.github.io/CV-V2/" target="blank">Live Server</a> :point_left:
-</p>
+-->
 
+<p align="center">
+:point_right:<a href="https://tombenrex.github.io/DynamicSite/" target="blank">Live Server</a> :point_left:
+</p>
 
 ##
 
