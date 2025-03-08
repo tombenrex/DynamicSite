@@ -40,6 +40,7 @@ main {
 .top-section {
   display: inline-grid;
   grid-template-columns: repeat(3, auto);
+  grid-template-rows: auto auto;
 }
 
 .welcome-txt {
@@ -47,11 +48,13 @@ main {
 }
 
 .section-heading {
-  font-family: "Great Vibes", cursive;
   display: flex;
-  padding-top: 1rem;
-  margin-left: -2rem;
-  grid-area: 1/2;
+  justify-content: center;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: "Bree Serif";
+  grid-area: 1/1/1/4;
 }
 
 .fa-arrow-down {
