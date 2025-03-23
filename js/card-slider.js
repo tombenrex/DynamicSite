@@ -51,9 +51,14 @@ const getNextColor = createColorCycle();
 async function fetchGitHubRepos() {
   const response = await fetch("https://api.github.com/users/tombenrex/repos");
   const repos = await response.json();
+
+  repos.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
   const container = document.getElementById("card-container");
 
   repos.forEach((repo) => {
+    if (repo.description && repo.description.includes("GitHub")) {
+      return; // Skip rendering this repository
+    }
     const projArticle = document.createElement("article");
     projArticle.classList.add("card");
 
@@ -79,16 +84,6 @@ async function fetchGitHubRepos() {
       projHead.appendChild(cssIcon);
     }
 
-    if (
-      !repo.description.includes("JS") &&
-      !repo.description.includes("HTML") &&
-      !repo.description.includes("CSS")
-    ) {
-      const defaultIcon = document.createElement("i");
-      defaultIcon.classList.add("fa-solid", "fa-user");
-      projHead.appendChild(defaultIcon);
-    }
-
     const projLow = document.createElement("div");
     projLow.classList.add("card-low");
 
@@ -98,7 +93,10 @@ async function fetchGitHubRepos() {
 
     const projDes = document.createElement("p");
     projDes.classList.add("card-text");
-    projDes.textContent = repo.description;
+    projDes.textContent =
+      repo.description && repo.description !== "no describe"
+        ? repo.description
+        : "No description available";
 
     const projLinks = document.createElement("div");
     projLinks.classList.add("card-links");
