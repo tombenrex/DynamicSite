@@ -113,7 +113,7 @@ function createRepoIcon(description) {
   } else if (!safeDescription.trim()) {
     // If the description is empty, use a default icon or message
     icon = document.createElement("i");
-    icon.classList.add("fa-solid", "fa-question-circle", "fa-2xl"); // A generic icon for missing descriptions
+    icon.classList.add("fa-solid", "fa-atom", "fa-2xl"); // A generic icon for missing descriptions
   }
 
   return icon;
