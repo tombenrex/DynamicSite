@@ -98,16 +98,19 @@ function createCardHeader(repo) {
 function createRepoIcon(description) {
   let icon = null;
 
-  if (description.includes("JS")) {
+  // Safely handle the description and avoid errors
+  const safeDescription = description || '';
+
+  if (safeDescription.includes("JS")) {
     icon = document.createElement("i");
     icon.classList.add("fa-brands", "fa-js", "fa-2xl");
-  } else if (description.includes("HTML")) {
+  } else if (safeDescription.includes("HTML")) {
     icon = document.createElement("i");
     icon.classList.add("fa-brands", "fa-html5", "fa-2xl");
-  } else if (description.includes("CSS")) {
+  } else if (safeDescription.includes("CSS")) {
     icon = document.createElement("i");
     icon.classList.add("fa-brands", "fa-css", "fa-2xl");
-  } else if (!description || description.trim() === "") {
+  } else if (!safeDescription.trim()) {
     // If the description is empty, use a default icon or message
     icon = document.createElement("i");
     icon.classList.add("fa-solid", "fa-question-circle", "fa-2xl"); // A generic icon for missing descriptions
