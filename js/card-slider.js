@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     carousel.scrollBy({ left: -300, behavior: "smooth" });
   });
 
+  // Skrivit själv
   document.addEventListener("keydown", function (event) {
     if (event.key === "ArrowLeft") {
       carousel.scrollBy({ left: -300, behavior: "smooth" });
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Skrivit själv
 function loadingDone() {
   const loadingText = document.getElementById("loading");
   if (loadingText) {
@@ -105,6 +107,10 @@ function createRepoIcon(description) {
   } else if (description.includes("CSS")) {
     icon = document.createElement("i");
     icon.classList.add("fa-brands", "fa-css", "fa-2xl");
+  } else if (!description || description.trim() === "") {
+    // If the description is empty, use a default icon or message
+    icon = document.createElement("i");
+    icon.classList.add("fa-solid", "fa-question-circle", "fa-2xl"); // A generic icon for missing descriptions
   }
 
   return icon;
@@ -120,8 +126,10 @@ function createCardFooter(repo) {
 
   const projDes = document.createElement("p");
   projDes.classList.add("card-text");
-  projDes.textContent = repo.description && repo.description !== "no describe"
-    ? repo.description
+
+  // Handle empty description with a fallback message
+  projDes.textContent = repo.description && repo.description.trim() !== "no describe"
+    ? (repo.description || "No description available")
     : "No description available";
 
   const projLinks = document.createElement("div");
@@ -136,5 +144,7 @@ function createCardFooter(repo) {
   projLow.append(projTitle, projDes, projLinks);
   return projLow;
 }
+
+loadingDone();
 
 fetchGitHubRepos();
