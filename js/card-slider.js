@@ -1,4 +1,3 @@
-// GPT
 document.addEventListener("DOMContentLoaded", function () {
   const carousel = document.querySelector(".carousel");
   const prevBtn = document.getElementById("prev");
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     carousel.scrollBy({ left: -300, behavior: "smooth" });
   });
 
-  // Skrivit själv
   document.addEventListener("keydown", function (event) {
     if (event.key === "ArrowLeft") {
       carousel.scrollBy({ left: -300, behavior: "smooth" });
@@ -22,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Skrivit själv
 function loadingDone() {
   const loadingText = document.getElementById("loading");
   if (loadingText) {
@@ -49,69 +46,95 @@ function createColorCycle() {
 const getNextColor = createColorCycle();
 
 async function fetchGitHubRepos() {
-  const response = await fetch("https://api.github.com/users/tombenrex/repos");
-  const repos = await response.json();
+  try {
+    const response = await fetch("https://api.github.com/users/tombenrex/repos");
+    const repos = await response.json();
 
-  repos.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
-  const container = document.getElementById("card-container");
+    // Filter and sort repos
+    const filteredRepos = repos.filter((repo) => !repo.description || !repo.description.includes("GitHub"));
+    filteredRepos.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
 
-  repos.forEach((repo) => {
-    if (repo.description && repo.description.includes("GitHub")) {
-      return; // Skip rendering this repository
-    }
-    const projArticle = document.createElement("article");
-    projArticle.classList.add("card");
+    const container = document.getElementById("card-container");
 
-    const projHead = document.createElement("header");
-    projHead.classList.add("card-top");
-    projHead.style.background = getNextColor();
+    filteredRepos.forEach((repo) => {
+      const projArticle = createRepoCard(repo);
+      container.appendChild(projArticle);
+    });
 
-    if (repo.description.includes("JS")) {
-      const jsIcon = document.createElement("i");
-      jsIcon.classList.add("fa-brands", "fa-js", "fa-2xl");
-      projHead.appendChild(jsIcon);
-    }
+    loadingDone(); // Hide the loader after all repos are rendered
+  } catch (error) {
+    console.error("Error fetching repos:", error);
+    const container = document.getElementById("card-container");
+    container.innerHTML = "<p>Failed to load repositories. Please try again later.</p>";
+  }
+}
 
-    if (repo.description.includes("HTML")) {
-      const htmlIcon = document.createElement("i");
-      htmlIcon.classList.add("fa-brands", "fa-html5", "fa-2xl");
-      projHead.appendChild(htmlIcon);
-    }
+function createRepoCard(repo) {
+  const projArticle = document.createElement("article");
+  projArticle.classList.add("card");
 
-    if (repo.description.includes("CSS")) {
-      const cssIcon = document.createElement("i");
-      cssIcon.classList.add("fa-brands", "fa-css", "fa-2xl");
-      projHead.appendChild(cssIcon);
-    }
+  const projHead = createCardHeader(repo);
+  const projLow = createCardFooter(repo);
 
-    const projLow = document.createElement("div");
-    projLow.classList.add("card-low");
+  projArticle.append(projHead, projLow);
+  return projArticle;
+}
 
-    const projTitle = document.createElement("h3");
-    projTitle.classList.add("card-title");
-    projTitle.innerHTML = `<a href="${repo.html_url}" target="_blank" title="(Open in new window)" >${repo.name}</a>`;
+function createCardHeader(repo) {
+  const projHead = document.createElement("header");
+  projHead.classList.add("card-top");
+  projHead.style.background = getNextColor();
 
-    const projDes = document.createElement("p");
-    projDes.classList.add("card-text");
-    projDes.textContent =
-      repo.description && repo.description !== "no describe"
-        ? repo.description
-        : "No description available";
+  const icon = createRepoIcon(repo.description);
+  if (icon) {
+    projHead.appendChild(icon);
+  }
 
-    const projLinks = document.createElement("div");
-    projLinks.classList.add("card-links");
+  return projHead;
+}
 
-    if (repo.homepage) {
-      projLinks.innerHTML = `<a href="${repo.homepage}" target="_blank" title="(Open in new window)">Checkout Preview <i class="fa-solid fa-laptop-code"></i></a>`;
-    } else {
-      projLinks.textContent = "No live server avaliable";
-    }
+function createRepoIcon(description) {
+  let icon = null;
 
-    projLow.append(projTitle, projDes, projLinks);
-    projArticle.append(projHead, projLow);
-    container.appendChild(projArticle);
-    loadingDone();
-  });
+  if (description.includes("JS")) {
+    icon = document.createElement("i");
+    icon.classList.add("fa-brands", "fa-js", "fa-2xl");
+  } else if (description.includes("HTML")) {
+    icon = document.createElement("i");
+    icon.classList.add("fa-brands", "fa-html5", "fa-2xl");
+  } else if (description.includes("CSS")) {
+    icon = document.createElement("i");
+    icon.classList.add("fa-brands", "fa-css", "fa-2xl");
+  }
+
+  return icon;
+}
+
+function createCardFooter(repo) {
+  const projLow = document.createElement("div");
+  projLow.classList.add("card-low");
+
+  const projTitle = document.createElement("h3");
+  projTitle.classList.add("card-title");
+  projTitle.innerHTML = `<a href="${repo.html_url}" target="_blank" title="(Open in new window)"> ${repo.name}</a>`;
+
+  const projDes = document.createElement("p");
+  projDes.classList.add("card-text");
+  projDes.textContent = repo.description && repo.description !== "no describe"
+    ? repo.description
+    : "No description available";
+
+  const projLinks = document.createElement("div");
+  projLinks.classList.add("card-links");
+
+  if (repo.homepage) {
+    projLinks.innerHTML = `<a href="${repo.homepage}" target="_blank" title="(Open in new window)">Checkout Preview <i class="fa-solid fa-laptop-code"></i></a>`;
+  } else {
+    projLinks.textContent = "No live server available";
+  }
+
+  projLow.append(projTitle, projDes, projLinks);
+  return projLow;
 }
 
 fetchGitHubRepos();
